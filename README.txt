@@ -1,7 +1,7 @@
 ==============================================
 Tarico Lua API Document
 ==============================================
-* API Version: 1.0
+* API Version: 1.1
 * Client Version: Tarico 1.41
 
 Abstract Methods:
@@ -31,6 +31,7 @@ Client API:
 ==============================================
 client.printVersion() -> print tarico client version in java print stream
 client.print(text) -> print a text in minecraft chat message
+	client.print("Hello world!") -> print Hello world! in chat
 client.getUsername() -> return tarico username
 client.sendNotification(type,text) -> send notification
 	type is a number value
@@ -42,12 +43,16 @@ client.sendNotification(type,text) -> send notification
 	client.sendNotification(3,"my text")
 client.getTimer() -> return minecraft timer speed
 client.setTimer(timerspeed) -> set minecraft timer speed
+	client.setTimer(2.0) -> set timer speed to 2.0
 client.getFPS() -> return minecraft FPS
 client.println(text) -> print message in java print stream
+	client.println("This is a log") -> print a log line
 client.isInGuiChat() -> return true if player opened Chat Gui
 client.getBPS() -> return player move blocks in 1 second
 client.getModuleState(name) -> return true if the module is toggled
+	client.getModuleState("LegitAura") -> return true if LegitAura enabled
 client.setModuleState(name,state) -> set a module toggle state
+	client.setModuleState("LegitAura",true) -> enable legitaura
 client.setSuffix(name,suffix) -> set a module suffix in arraylist
 client.setChinese(name,chinese) -> set a module chinese text
 ==============================================
